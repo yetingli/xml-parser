@@ -23,7 +23,7 @@ function parse(xml) {
   xml = xml.trim();
 
   // strip comments
-  xml = xml.replace(/<!--[\s\S]*?-->/g, '');
+  xml = xml.replace(/<!--(?:(?!<!--[\s\S])*?)-->/g, '');
 
   return document();
 
